@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petra's Portfolio</title>
+
+
+    <!-- plugins -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <!-- html -->
+    <nav class="navigation-bar">
+
+        <ul id="nav-bar-ul">
+            <li>
+                <img class="logo"
+                    src="https://lh3.googleusercontent.com/pw/AM-JKLWq90-FW8HjdiDxrvUWbWKXKtBtqI2x3SxUpDX3DqJaBXyjOro5sjNbiYn5Cj70RlD05GPJXP7JgmUUMVWR9iIRNpksLExohUEa5_DKTEEuz5_I4jk9Dtt2AYbiU4OPUEiDwC0Dw6bq2X1ykWMj9OHX=s999-no?authuser=0"
+                    alt="Logo">
+            </li>
+            <li>
+                <h1 id="logo-text">Petra Michael</h1>
+            </li>
+
+
+
+            <li>
+                <h2 class="nav-choice"><a href="https://sites.google.com/view/12321-petra-michael/activity">Back</a>
+                </h2>
+            </li>
+            <li>
+                <h2 class="nav-choice"><a href="">Repository</a></h2>
+            </li>
+        </ul>
+    </nav>
+
+
+
+
+
+
+
+
+    <!-- copied header from portfolio's file-->
+    <style>
+        .container {
+            max-width: 70rem;
+            padding: 0 2rem;
+            margin: 0 auto;
+        }
+
+        header {
+            width: 100%;
+            height: 908px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 908px;
+            left: 0;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0);
+            z-index: 25;
+        }
+
+        .part1 {
+            position: absolute;
+            width: 100%;
+            height: 908px;
+            bottom: 0px;
+            width: 100%;
+            bottom: 0px;
+            z-index: 21;
+        }
+
+        .part2 {
+            position: absolute;
+            width: 100%;
+            height: 908px;
+            bottom: 0px;
+            z-index: 19;
+        }
+
+        .part3 {
+            position: absolute;
+            width: 100%;
+            height: 908px;
+            bottom: 0px;
+            z-index: 18;
+        }
+
+        .part4 {
+            position: absolute;
+            width: 100%;
+            height: 908px;
+            bottom: 0px;
+            z-index: 17;
+        }
+
+        .part5 {
+            position: absolute;
+            width: 100%;
+            height: 908px;
+            bottom: 0px;
+            z-index: 16;
+        }
+
+        .part6 {
+            position: absolute;
+            width: 100%;
+            height: 908px;
+            bottom: 0px;
+            z-index: 15;
+        }
+
+        .part7 {
+            position: absolute;
+            width: 100%;
+            height: 908px;
+            bottom: 0px;
+            z-index: 14;
+        }
+
+
+
+        .logo {
+            color: #fff;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            font-weight: 300;
+        }
+
+        .bar {
+            position: relative;
+            width: 1.2rem;
+            height: 3px;
+            background-color: #fff;
+            border-radius: 2px;
+        }
+
+        .bar:before,
+        .bar:after {
+            content: '';
+            position: absolute;
+            width: 1.55rem;
+            height: 3px;
+            right: 0;
+            background-color: #fff;
+            border-radius: 2px;
+        }
+
+        .bar:before {
+            transform: translateY(-8px);
+        }
+
+        .bar:after {
+            transform: translateY(8px);
+        }
+
+        .big-title {
+            position: absolute;
+            z-index: 20;
+            line-height: 4rem;
+            top: calc(40% - 2rem);
+            width: 100%;
+            text-align: center;
+            font-size: 5rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        section {
+            width: 100%;
+            background-color: #151515;
+            position: relative;
+        }
+
+        section .container {
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        section img {
+            width: 100%;
+        }
+
+        section .container>* {
+            margin: 1rem;
+        }
+
+        .content {
+            color: #fff;
+            transform: translateY(-50px);
+        }
+
+        .imgContainer {
+
+            transform: translateY(-10%);
+        }
+
+        .title {
+            font-weight: 600;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: .5rem;
+            position: relative;
+        }
+
+        .border {
+            position: absolute;
+            width: 0%;
+            height: 3px;
+            background-color: #fff;
+            bottom: 0;
+            left: 0;
+        }
+
+        .shadow {
+            position: absolute;
+            bottom: 100%;
+            height: 10%;
+            width: 100%;
+            left: 0;
+            z-index: 24;
+            background: linear-gradient(to top, #151515, transparent);
+        }
+
+        .opacity {
+            opacity: 0;
+        }
+
+        @media (max-width: 850px) {
+            section .container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media(max-width: 600px) {
+            .big-title {
+                font-size: 3rem
+            }
+
+            .text {
+                font-size: .8rem;
+            }
+
+            .title {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+
+    <!-- html -->
+    <header>
+        <h1 class="big-title translate" data-speed="0.1">
+            Achievements
+        </h1>
+
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLVkNroXTtcGje4bb-PIGMbeOC30T7uV9vKgRwv_WscHDAgqaJwl5YscWKhG1Cxe1L7zpFuzYKCc_MazfZZbbxij1yCV-vpwsLQ4W9yth_eakiFO-gnpzxiu_-YhNoJSxBxWobSa_1HlBTbw_OF740gR=w1449-h951-no?authuser=0"
+            class="part1 translate" data-speed="0.01" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLV-TdTPKzEkd9idpH4cIfbWe5BDsnByQftoIhs3GkoSkg4xG9zDnqlpcP_BHabSqwSZxRYiuq4wOzCFJWKe8LzSGkXaHyBt6g9dBUgbn2kwUgsuImXWANvsHkDn1AyGS7M_rZCzvxK0wWXiF8oOFh43=w1449-h951-no?authuser=0"
+            class="part2 translate" data-speed="0.05" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLU-0nhhHuvenFTQO-MljHX9lPgt_-5HHZTAp2g3N0p7ALXT3moI-jVQcu61bMoUlIG0o9lkqVY9taMpbJda33gCo5wtf_VySFxvNQxsq16DQY2hLcVcXu35FJxcB46l_jMVM8RnWGePE3zByPh0KN_l=w1449-h951-no?authuser=0"
+            class="part3 translate" data-speed="0.1" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLURjRTSBkVzlgmj7hfhW8blDteStwwRbciobUX9i83Z9w6ynwJ_d2oniim7Aq9pYvfThfYV0M1qCf-4_iKoWekKVKg2lanixObcEJZQ2_-MAu5KFIC-oDCHU_YphROwGsLun3x2G2WQQcUEb7mpQN1e=w1535-h1007-no?authuser=0"
+            class="part4 translate" data-speed="0.2" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLWu29NLkomqHFFIOtN38Lp8dsLYiVpG_NUy8T1LLLzla1aTq29TJkSAPiCt6W8kg9TsC3GfVG3n_H5AKNLrg9xHN05gta_H48aCZ8Ad0TG3Oxu9q-BnZOuNjU_tpLad-NIdy0ejJmyN064G7ekD-kK1=w1535-h1007-no?authuser=0"
+            class="part5 translate" data-speed="0.4" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLV3spFnv8QVFFn670p-zXubJtFLTsdGju9J6AznAPW-ZP03pW2kPrITIRjoaVM7p2MHdpZKgjNfs3KKGUJW58WRtcB6QtIt7Ai6YFli37ZHprxuYnXGLiEHDp5si39atcItM1rSe2RAdGLinv8jf7Gz=w1535-h1007-no?authuser=0"
+            class="part6 translate" data-speed="0.6" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLWS8nP6iOooDX3-rxCZwgeDUbPOTBzigaOpYv1gcbZ1iVwSx9as5bITh6D7jtaezANWr8uUsvr8kqikQlBUXLoj-M4PFMTYrtwAqIt1I5zM_z6dCAl2IBH2IJZWQ9cg-RHx5kbqRx5RVErXUkfy8WjB=w1535-h1007-no?authuser=0"
+            class="part7 translate" data-speed="0.8" alt="">
+    </header>
+
+    <!--fills / content-->
+    <section>
+        <div class="shadow"></div>
+
+
+
+        <!-- 1 -->
+        <div class="container" data-aos="zoom-in-left">
+            <div class="content opacity">
+                <h3 class="title" style="text-align: right;">
+                    Participant, Cayley Contest 2019
+                    <!-- <div class="border"></div> -->
+                </h3>
+                <p class="text" style="text-align: right;">
+                    Cayley contest adalah kompetisi matematika yang diadakan oleh University of Waterloo. Ini
+                    adalah perlombaan matematika pertama di SMA, sehingga memberikan pandangan terhadap dunia lomba SMA
+                </p>
+            </div>
+
+            <div class="imgContainer opacity">
+                <img src="https://lh3.googleusercontent.com/pw/AM-JKLWmzhzrrJ9qVjt8FsotGAhQj8xhqmegaKU3VGTK_g9LhHAZkePzyRaiVRWdppjxPdFiG8i8YURQkYTryRun347U7r_e8tATCRtIkih4_gNPw8MsOWF_4qScYf4tmQyqUmQfALwQIGRMiL6wkJA7KxrR=w927-h721-no?authuser=0"
+                    alt="Cayley math Contest">
+            </div>
+        </div>
+
+
+
+        <!-- 2 -->
+        <div class="container" data-aos="zoom-in-right">
+            <div class="imgContainer opacity">
+                <img src="https://lh3.googleusercontent.com/pw/AM-JKLW1K7-wH0-1IccU7h78G9ZdXFYHWC1IkxNev31v6cgDp_aP2alUNeTknvFOmqb2ahMhM-Hs19AKZRyFPLqV8EEtRhQtUexvjDH1i2zlYx2w5v7CPK8VIzUbfgGBL0ZtbNDn3lBnhA6SFbaVDNYimZwT=w1011-h724-no?authuser=0"
+                    alt="FUSION UnPar">
+            </div>
+
+            <div class="content opacity">
+                <h3 class="title">
+                    Participant, FUSION UnPar 2019
+                    <!-- <div class="border"></div> -->
+                </h3>
+                <p class="text">
+                    FUSION adalah perlombaan Fisika yang diadakan tahunan oleh Universita Parahyangan. Sebelumnya saya
+                    sendiri telah mengikuti kompetisi ini selama 3 tahun berturut-turut. Memang kebanyakan waktu gagal
+                    memeperoleh kejuaraan, akan tetapi soalnya sendiri mengasikan dan membuat saya selalu tertantang
+                    untuk mencoba mengerti logikanya. Tanpa terkecuali tahun 2019, dimana saya bisa kembali mengikuti
+                    ajang kompetisi ini dan bertemu rival-rival yang sama dari tahun-tahun sebelumnya.
+                </p>
+            </div>
+        </div>
+
+
+
+        <!-- 3 -->
+        <div class="container" data-aos="zoom-in-left">
+            <div class="content opacity">
+                <h3 class="title" style="text-align: right;">
+                    Participant, OKN UGM 2019
+                    <!-- <div class="border"></div> -->
+                </h3>
+                <p class="text" style="text-align: right;">
+                    OKN UGM adalah suatu olimpiade kimia tingkat nasional yang diadakan oleh Unversitas Gadjah Mada.
+                    Olimpiade ini adalah satu-satunya perlombaan di bidang kimia yang saya ikuti. Saya sendiri gugup
+                    karena kimia saya sendiri tidak kuat. Akaan tetapi saya menggangap perlombaan ini sebagai pengalaman
+                    untuk di bidang kimia.
+                </p>
+            </div>
+
+            <div class="imgContainer opacity">
+                <img src="https://lh3.googleusercontent.com/pw/AM-JKLVYykeJwBduxOg12gdHJXq1cI_tjmYVw4F2QA3NYTtvgH79Mo3R1yh9uWm1fw0p3dDmr30my4skt-eigRujFguZ6gxl3jQL9fMixynoujhiLIJ71Uudxg-Gp6h2YtZHF_el61RT6DGC3GfIhLuYScwo=w959-h762-no?authuser=0"
+                    alt="OKN UGM">
+            </div>
+        </div>
+
+
+
+        <!-- 4 -->
+        <div class="container" data-aos="zoom-in-right">
+            <div class="imgContainer opacity">
+                <img src="https://lh3.googleusercontent.com/pw/AM-JKLXz7F1L7lWQpy-TtvO12g5JSeS3o8KB7owx5ea3sBuuUGaEgME-T4ifumNXZ6drGMwe22rsLNF2C4DNyc_jFw4nynDcv-I0cWO-aJyh6v8F-Ohmk9CEl3Br6P-3Qo45airLMiCdv9DH9U8MzfkeKTEN=w474-h266-no?authuser=0"
+                    alt="KSN">
+            </div>
+
+            <div class="content opacity">
+                <h3 class="title">
+                    Participant, OSN Kota 2019 (Fisika)
+                    <!-- <div class="border"></div> -->
+                </h3>
+                <p class="text">
+                    OSN atau sekarang kerab dipanggil KSN adalah sebuah olimpiade ajang nasional yang diadakan tiap
+                    tahun oleh kementrian pendidikan. Saya sendiri memiliki sejarah yang panjang dengan OSN, semenjak SD
+                    sendiri saya telah mengikuti pelatihan OSN hingga kemenangan di <a class="pharagraph-hyperlink"
+                        href="https://lh3.googleusercontent.com/pw/AM-JKLXz7F1L7lWQpy-TtvO12g5JSeS3o8KB7owx5ea3sBuuUGaEgME-T4ifumNXZ6drGMwe22rsLNF2C4DNyc_jFw4nynDcv-I0cWO-aJyh6v8F-Ohmk9CEl3Br6P-3Qo45airLMiCdv9DH9U8MzfkeKTEN=w474-h266-no?authuser=0">tahun
+                        2015</a>.
+                    Dan terus mengikuti walau gagal terus selama SMP hingga SMA. Selama masa ini pula lah saya
+                    menganggap OSN sebagai pengalaman di dunia kompetisi yang paling memberi penting.
+                </p>
+            </div>
+        </div>
+
+
+
+        <!-- 5 -->
+        <div class="container" data-aos="zoom-in-left">
+            <div class="content opacity">
+                <h3 class="title" style="text-align: right;">
+                    Semifinalist, KoMat UnPar 2020
+                    <!-- <div class="border"></div> -->
+                </h3>
+                <p class="text" style="text-align: right;">
+                    Komat adalah kompetisi matematika yang juga diselenggarakan oleh Universita Parahyangan. Perlobaan
+                    ini sudah terjadi secara online karena situasi global. Akan tetapi perolehan semifinalis ini tidak
+                    terduga bahkan oleh saya. Karena saya kurang mengerti beberapa soal. Tetapi untuk ini saya bersyukur
+                    atas kesempatan yang diberikan.
+                </p>
+            </div>
+
+            <div class="imgContainer opacity">
+                <img src="https://lh3.googleusercontent.com/pw/AM-JKLUyUEsH-Mx5EftxJmDlkZdw8C0tkRz2qWfIbis4sf_uEpRdNGXsrAloeX0hWaGQMlEtJCPdKRcLE1UYUAsq6Tp_6DHNq0lFikLCnYKuZZxH9CHcX7NbZdlau673dJfg5bHRuFIIolCl8ON4rQebc-bs=w959-h685-no?authuser=0"
+                    alt="komat unpar">
+            </div>
+        </div>
+
+
+
+        <!-- 6 -->
+        <div class="container" data-aos="zoom-in-right">
+            <div class="imgContainer opacity">
+                <img src="https://lh3.googleusercontent.com/pw/AM-JKLXz7F1L7lWQpy-TtvO12g5JSeS3o8KB7owx5ea3sBuuUGaEgME-T4ifumNXZ6drGMwe22rsLNF2C4DNyc_jFw4nynDcv-I0cWO-aJyh6v8F-Ohmk9CEl3Br6P-3Qo45airLMiCdv9DH9U8MzfkeKTEN=w474-h266-no?authuser=0"
+                    alt="osn">
+            </div>
+
+            <div class="content opacity">
+                <h3 class="title">
+                    Participant, OSN Kota 2020 (Matematika)
+                    <!-- <div class="border"></div> -->
+                </h3>
+                <p class="text">
+                    Pada tahun 2020, saya kembali lagi mengikuti OSN, tetapi berbeda dengan tahun-tahun sebelumnya, kali
+                    ini di mata pelajaran matematika. Saya memang memiliki beberapa pengalaman di perlombaan matematika,
+                    tetapi tidak sampai OSN. Sedihnya olmpiade kali ini tertunda-tunda dari masa mulai seharusnya.
+                    Tetapi saya terima sebagai pengalaman saja.
+                </p>
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+
+    <!-- javascript -->
+    <script>
+        const translate = document.querySelectorAll(".translate");
+        const big_title = document.querySelector(".big-title");
+        const header = document.querySelector("header");
+        const shadow = document.querySelector(".shadow");
+        const content = document.querySelector(".content");
+        const section = document.querySelector("section");
+        const image_container = document.querySelector(".imgContainer");
+        const opacity = document.querySelectorAll(".opacity");
+        const border = document.querySelector(".border");
+        const border_right = document.querySelector(".border-right");
+
+        let header_height = header.offsetHeight;
+        let section_height = section.offsetHeight;
+
+        window.addEventListener('scroll', () => {
+            let scroll = window.pageYOffset;
+            let sectionY = section.getBoundingClientRect();
+
+            translate.forEach(element => {
+                let speed = element.dataset.speed;
+                element.style.transform = `translateY(${scroll * speed}px)`;
+            });
+
+            opacity.forEach(element => {
+                element.style.opacity = scroll / (sectionY.top + section_height);
+            })
+
+            big_title.style.opacity = - scroll / (header_height / 2) + 1;
+            shadow.style.height = `${scroll * 0.5 + 300}px`;
+
+            content.style.transform = `translateY(${scroll / (section_height + sectionY.top) * 50 - 50}px)`;
+            image_container.style.transform = `translateY(${scroll / (section_height + sectionY.top) * -50 + 50}px)`;
+
+            border.style.width = `${scroll / (sectionY.top + section_height) * 30}%`;
+            border_right.style.width = `${scroll / (sectionY.top + section_height) * 30}%`;
+        })
+    </script>
+
+
+
+
+
+
+
+
+
+    <!-- content -->
+    <!-- links -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+    </style>
+    <!-- css -->
+    <style>
+        /* for all */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        a:link,
+        a:active,
+        a:visited {
+            color: rgb(219, 252, 253);
+            transition: all 0.5s ease 0s;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: white;
+        }
+
+        .pharagraph-hyperlink:link,
+        .pharagraph-hyperlink:active {
+            color: rgb(153, 189, 255);
+            text-decoration: none;
+        }
+
+        /* navigation */
+        .navigation-bar {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .navigation-bar {
+            background-size: cover;
+            background-color: #1b1b1b;
+            width: 100%;
+            overflow: hidden;
+            margin-right: 17%;
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0px;
+            z-index: 30;
+        }
+
+        #nav-bar-ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #nav-bar-ul h2 {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 1.25em;
+        }
+
+        .navigation-bar h1,
+        .navigation-bar h2,
+        .navigation-bar img {
+            float: left;
+            font-size: 1.4rem;
+            padding: 0% 1%;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .navigation-bar h1,
+        .navigation-bar h2 {
+            color: rgb(219, 252, 253);
+        }
+
+        .navigation-bar h2 {
+            float: right;
+            border: solid white;
+            border-radius: 0%;
+            transition: all 0.5s ease 0s;
+            margin-inline: 1%;
+        }
+
+        .navigation-bar h2:hover {
+            background-color: #1d1d1d;
+            border-radius: 40px 40px 40px 40px;
+            color: whitesmoke;
+            cursor: pointer;
+        }
+
+        .logo {
+            height: 2em;
+            width: 2em;
+            margin: 1%;
+            margin-top: 1em;
+        }
+
+        #logo-text {
+            font-weight: bold;
+            font-size: 2em;
+            float: left;
+        }
+
+
+        /* content */
+        .content {
+            font-family: 'Nunito', sans-serif;
+            margin: 50px 17%;
+        }
+    </style>
+
+
+
+    <!-- JS -->
+
+    <!-- plugin start -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 400,
+            duration: 1000
+        });
+    </script>
+</body>
+
+</html>
